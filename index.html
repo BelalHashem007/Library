@@ -23,7 +23,32 @@
         <tbody>
         </tbody>
     </table>
+    <form id="form" name="my-form">
+        <fieldset>
+            <legend>Your Book.</legend>
+            <div class="title-container">
+                <label for="title">*Title :</label>
+                <input type="text" name="title" id="title" required>
+            </div>
+            <div class="author-container">
+                <label for="author">*Author :</label>
+                <input type="text" name="author" id="author" required>
+            </div>
+            <div class="Pages-container">
+                <label for="pages">Number Of Pages :</label>
+                <input type="text" name="pages" id="pages" placeholder="E.g. 70 pages">
+            </div>
+            <div class="read-container">
+                <label for="readStatus">Read Status :</label>
+                <select name="readStatus" id="readStatus">
+                    <option value="read">I have read it.</option>
+                    <option value="not yet read" selected>I haven`t read it yet.</option>
+                </select>
+            </div>
+            <button class ="submit-btn" type="submit">Add Book</button>
+        </fieldset>
 
+    </form>
 </body>
 
 </html>

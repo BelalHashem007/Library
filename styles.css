@@ -1,12 +1,18 @@
 * {
     box-sizing: border-box;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
 }
 body {
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 100px;
     font-family: "helvetica neue", helvetica, arial, sans-serif;
+    font-size: 1rem;
 }
 
 table {
@@ -48,6 +54,76 @@ tbody tr:nth-child(even) {
     background-color: #f3f3f3;
 }
 td, th {
-    border: 1px solid black;
+    border: 1px solid black;    
     padding: 20px;
+}
+form {
+    width: 30%;
+    height: 400px;
+}
+label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+}
+input[type="text"] {
+    width: 200px;
+    height: 35px;
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid black;
+}
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 4px 5px rgba(94, 91, 80, 0.349);
+    border-color: rgba(110, 0, 0, 0.596);
+}
+fieldset {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+    gap: 20px;
+}
+select {
+    appearance: none;
+    width: 200px;
+    padding: 10px;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+select:focus {
+    outline: none;
+}
+.read-container {
+    position: relative;
+}
+.read-container::after {
+    content: "▼";
+    position: absolute;
+    font-size: 1rem;
+    color: black;
+    top: 10px;
+    right: 195px;
+}
+button {
+    width: 200px;
+    height: 40px;
+    margin-left: 154px;
+    margin-top: 50px;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px black;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+button:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 3px black;
+    cursor: pointer;
 }
